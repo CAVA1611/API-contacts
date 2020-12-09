@@ -1,0 +1,20 @@
+{
+  "name": "contacts",
+  "version": "1.0.0",
+  "description": "API Contacts",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CAVA1611/API-contacts.git"
+  },
+  "homepage": "https://github.com/CAVA1611/API-contacts",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cesar Velasco A",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
