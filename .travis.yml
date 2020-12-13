@@ -1,0 +1,20 @@
+sudo: required
+language: node_js
+node_js:
+ - "9"
+ service:
+ - docker
+ before_install:
+  - wget -q0- http://toobelt.heroku.com/install.sh | sh
+install:
+ - npm install
+ script:
+  - docker build -t contacts .
+  deploye:
+   provider: script
+   skip_cleanup: true
+   script:
+    heroku container: login;
+    heroku container: push web -a $HEROKU_APP_NAME;
+    heroku container: relase web -a $HEROKU_APP_NAME;
+  branch: master
