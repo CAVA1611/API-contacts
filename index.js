@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var DataStore = require('nedb');
 
-var port = 3030;
+var port = (process.env.PORT || 3030);
 var BASE_API_PATH = "/api/v1";
 var DB_FILE_NAME = __dirname + "/contacts.json";
 
@@ -35,7 +35,6 @@ app.get(BASE_API_PATH + "/contacts", (req, res) =>{
             }));
         }
     });
-    
 });
 
 app.post(BASE_API_PATH + "/contacts", (req, res) => {
